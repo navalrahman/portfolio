@@ -1,0 +1,97 @@
+/* .skills-container {
+    width: 100%;
+  padding: 40px;
+  text-align: center;
+}
+
+.skills-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.skills-subtitle {
+  font-size: 20px;
+  margin: 20px 0 10px;
+  color: #555;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin-bottom: 30px;
+}
+
+.skill-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  opacity: 1;
+}
+
+.skill-icon:hover {
+  transform: scale(1.1);
+}
+
+.pursuing {
+  opacity: 0.6;
+  filter: grayscale(100%);
+} */
+
+
+.skills-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.skills-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.skills-subtitle {
+  font-size: 20px;
+  margin: 20px 0 10px;
+  color: #444;
+}
+
+/* KNOWN skills: Grid with 2 rows */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-auto-rows: 100px;
+  max-width: 600px;
+  margin: 0 auto;
+  gap: 20px;
+  justify-items: center;
+}
+
+/* LEARNING skills: stacked one per line */
+.skills-grid.learning {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.skill-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.skill-icon:hover {
+  transform: scale(1.1);
+}
+
+.pursuing {
+  opacity: 0.6;
+  filter: grayscale(100%);
+}

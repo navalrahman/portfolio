@@ -1,0 +1,46 @@
+.experience-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+/* This makes the two cards display side by side */
+.experience-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Allows them to stack on smaller screens */
+}
+
+.experience-card {
+  /* background: #f9f9f9; */
+  padding: 20px;
+  border-radius: 12px;
+  /* border: 1px solid #ddd; */
+  width: 45%;
+  min-width: 300px;
+  text-align: left;
+}
+
+.experience-card h2 {
+  color: #0066cc;
+}
+
+.experience-card h4 {
+  margin: 10px 0;
+  color: #555;
+}
+
+.experience-highlights,
+.project-list {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.project-section h5 {
+  margin-top: 15px;
+}
