@@ -13,7 +13,7 @@ import psql from '../../images/postgre.png'
 import putty from '../../images/PuTTY.png'
 import tailwind from '../../images/Tailwind CSS.png'
 import css from '../../images/text.png'
-import typscript from '../../images/Typescript.png'
+import typscript from '../../images/TypeScript.png'
 import vscode from '../../images/vscode.png'
 import vite from '../../images/Vite.js.png'
 
