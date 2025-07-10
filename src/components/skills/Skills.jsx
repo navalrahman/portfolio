@@ -1,6 +1,6 @@
 import React from 'react'
 
-import aws from '../../images/Aws.png'
+import aws from '../../images/AWS.png'
 import github from '../../images/GitHub.png'
 import html from '../../images/html-5.png'
 import js from '../../images/js.png'
