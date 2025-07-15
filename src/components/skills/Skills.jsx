@@ -20,15 +20,29 @@ import vite from '../../images/Vite.js.png'
 import './Skill.css' // Assuming you’ll style it separately
 
 const knownSkills = [
-  html, css, js, react, node, mongodb, github, vscode, mysql, psql, vite, putty
-]
+  { name: "HTML", logo: html },
+  { name: "CSS", logo: css },
+  { name: "JavaScript", logo: js },
+  { name: "React", logo: react },
+  { name: "Node.js", logo: node },
+  { name: "MongoDB", logo: mongodb },
+  { name: "GitHub", logo: github },
+  { name: "VS Code", logo: vscode },
+  { name: "MySQL", logo: mysql },
+  { name: "PostgreSQL", logo: psql },
+  { name: "Vite", logo: vite },
+  { name: "PuTTY", logo: putty }
+];
 
 const learningSkills = [
-  typscript, next, tailwind, aws
-]
+  { name: "TypeScript", logo: typscript },
+  { name: "Next.js", logo: next },
+  { name: "Tailwind CSS", logo: tailwind },
+  { name: "AWS", logo: aws }
+];
 
 const Skills = () => {
- return (
+  return (
     <div className="skills-container">
       <h2 className="skills-title">My Skills</h2>
 
@@ -36,7 +50,10 @@ const Skills = () => {
         <h3 className="skills-subtitle">✅ Known</h3>
         <div className="skills-grid">
           {knownSkills.map((icon, index) => (
-            <img key={index} src={icon} alt={`Known Skill ${index}`} className="skill-icon" />
+            <div>
+              <img key={index} src={icon.logo} alt={`Known Skill ${index}`} className="skill-icon" />
+              <h3>{icon.name}</h3>
+            </div>
           ))}
         </div>
       </div>
@@ -45,7 +62,10 @@ const Skills = () => {
         <h3 className="skills-subtitle">🧠 Currently Pursuing</h3>
         <div className="skills-grid learning">
           {learningSkills.map((icon, index) => (
-            <img key={index} src={icon} alt={`Learning Skill ${index}`} className="skill-icon pursuing" />
+            <div>
+              <img key={index} src={icon.logo} alt={`Learning Skill ${index}`} className="skill-icon pursuing" />
+              <h3>{icon.name}</h3>
+            </div>
           ))}
         </div>
       </div>

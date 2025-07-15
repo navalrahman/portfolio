@@ -1,24 +1,25 @@
-.hero-section{
-    /* border: 1px solid black; */
-    /* width: 100%; */
+.hero-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: top;
+    align-items: flex-start;
     padding: 50px;
     margin-top: 10px;
+    animation: fadeIn 1s ease-in-out forwards;
+    gap: 30px;
 }
 
-.hero-section-container-one{
+.hero-section-container-one {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    flex: 1;
+    min-width: 250px;
 }
 
-.hero-section-container-two{
+.hero-section-container-two {
     display: flex;
     flex-direction: column;
-    /* gap: 10px; */
     width: 250px;
     height: 230px;
     border: 1px solid white;
@@ -26,22 +27,25 @@
     justify-content: center;
     border-radius: 50px;
     background-color: white;
+    flex-shrink: 0;
 }
 
-.hero-section-container-two img{
-    background-color: white;
+.hero-section-container-two img {
     width: 180px;
     height: 220px;
+    object-fit: cover;
+    background-color: white;
 }
 
-.hero-section-container-three{
+.hero-section-container-three {
     display: flex;
-    width: 30%;
     flex-direction: column;
     gap: 20px;
+    flex: 1;
+    min-width: 250px;
 }
 
-.hero-section-container-one-subcontainer-one{
+.hero-section-container-one-subcontainer-one {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -49,9 +53,50 @@
 
 @keyframes fadeIn {
     from { opacity: 0; }
-    to { opacity: 5; }
+    to { opacity: 1; }
 }
 
-.hero-section {
-    animation: fadeIn 1s ease-in-out forwards;
+/* ✅ Responsive for tablets and below */
+@media screen and (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+    }
+
+    .hero-section-container-two {
+        width: 200px;
+        height: auto;
+        margin: 20px 0;
+    }
+
+    .hero-section-container-two img {
+        width: 160px;
+        height: auto;
+    }
+
+    .hero-section-container-three {
+        width: 100%;
+    }
+}
+
+/* ✅ Mobile responsiveness */
+@media screen and (max-width: 480px) {
+    .hero-section {
+        padding: 20px 10px;
+    }
+
+    .hero-section-container-one,
+    .hero-section-container-three {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-section-container-two {
+        width: 180px;
+    }
+
+    .hero-section-container-two img {
+        width: 140px;
+    }
 }
